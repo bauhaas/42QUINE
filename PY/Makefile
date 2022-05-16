@@ -13,6 +13,10 @@ test:
 			@echo "--- TESTING ---\n"
 			@echo "COLLEEN"
 			@$(CC) $(COLLEEN) > colleen.log
+<<<<<<< HEAD
+=======
+			@diff colleen.log Colleen.py
+>>>>>>> fee4397e3d909a0473f101bde0749f7da6ff2af0
 			@if (diff colleen.log Colleen.py); then \
         		echo $(GREEN)"[OK]"$(RESET); \
     		else \
@@ -20,6 +24,10 @@ test:
     		fi
 			@echo "GRACE"
 			@$(CC) $(GRACE)
+<<<<<<< HEAD
+=======
+			@diff Grace.py Grace_kid.py
+>>>>>>> fee4397e3d909a0473f101bde0749f7da6ff2af0
 			@if (diff Grace.py Grace_kid.py); then \
         		echo $(GREEN)"[OK]"$(RESET); \
     		else \
