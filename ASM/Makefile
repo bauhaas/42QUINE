@@ -1,0 +1,23 @@
+
+CC = clang
+
+CFLAGS = -Wall -Wextra -Werror
+
+NAMEACOLLEEN = Colleen
+SRCSACOLLEEN = Colleen.s
+OBJACOLLEEN = $(SRCSACOLLEEN:.s=.o)
+
+NAMEAGRACE = Grace
+SRCSAGRACE = Grace.s
+OBJAGRACE = $(SRCSAGRACE:.s=.o)
+
+%.o: %.s
+	nasm -f elf64 -o $*.o $*.s
+
+all:	$(NAMEAGRACE)
+
+$(NAMEACOLLEEN): $(OBJACOLLEEN)
+	$(CC) $(CFLAGS) $(OBJACOLLEEN) -o $(NAMEACOLLEEN)
+
+$(NAMEAGRACE): $(OBJAGRACE)
+	$(CC) $(CFLAGS) $(OBJAGRACE) -o $(NAMEAGRACE)
