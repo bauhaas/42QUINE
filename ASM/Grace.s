@@ -33,6 +33,8 @@ extern fprintf
 		pop rdi					; remove 34 from the stack
 		pop rdi					; move fopen return into rdi
 		call fclose				; fclose
+		mov rsp, rbp
+		pop rbp
 		ret
 %endmacro
 
