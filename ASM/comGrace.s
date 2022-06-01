@@ -17,25 +17,25 @@ extern fprintf
 
 %macro FT 0
 	main:
-		push rbp
-		mov rbp, rsp
-		mov rdi, filename
-		mov rsi, mode
-		call fopen
-		push rax
-		mov rdi, rax
-		mov rsi, str
-		mov rdx, str
-		mov rcx, 9
-		mov r8, 10
-		push 34
-		call fprintf
-		pop rax
-		pop rdi
-		call fclose
-		mov rsp, rbp
-		pop rbp
-		ret
+		push rbp				;
+		mov rbp, rsp			;	stack frame init
+		mov rdi, filename 		;
+		mov rsi, mode 			; set params for fopen call
+		call fopen				; fopen(filename, mode)
+		push rax				; save rax (FD value) for fclose
+		mov rdi, rax 			;
+		mov rsi, str 			;
+		mov rdx, str 			; set params for fprintf call
+		mov rcx, 9 				;
+		mov r8, 10				;
+		push 34					;
+		call fprintf			; fprintf(rax, str, str, "\t", "\n", "\"")
+		pop rax					; remove 34 from the stack
+		pop rdi					; move fopen return into rdi
+		call fclose				; fclose(rax)
+		mov rsp, rbp			;
+		pop rbp					; restore original stack
+		ret 					; end
 %endmacro
 
 FT

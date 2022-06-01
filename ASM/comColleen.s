@@ -5,16 +5,16 @@ global main
 extern printf
 
 main:
-push rbp
-mov rbp, rsp
-mov rdi, format
-mov rsi, format
-mov rdx, 10
-mov rcx, 34
-call printf
-mov rsp, rbp
-pop rbp
-ret ;ret
+push rbp            ;
+mov rbp, rsp        ; stack frame init
+mov rdi, format     ;
+mov rsi, format     ; set params for printf call
+mov rdx, 10         ;
+mov rcx, 34         ;
+call printf         ; printf(format, format "\n", "\"")
+mov rsp, rbp        ;
+pop rbp             ; restore original stack
+ret ;ret            ; end
 
 section .data
 format:
