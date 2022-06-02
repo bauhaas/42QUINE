@@ -38,7 +38,7 @@ mov r8, 10                  ;
 mov r9, 34                  ;
 push 37                     ;
 call fprintf                ; fprintf(rax, data, data, r12, "\n", "\"", "%")
-pop rax                     ; remove 34 from the stack
+pop rax                     ; remove % from the stack
 
 pop rdi                     ; move fopen return into rdi
 call fclose                 ; fclose(rax)

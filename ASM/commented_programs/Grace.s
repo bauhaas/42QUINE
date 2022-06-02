@@ -5,7 +5,7 @@
 
 section .data
 str: db STR, 0
-filename: db FILENAME, 0
+filename: db FILENAME, 0	;way to delcare string in asm. db stands for declare byte
 mode: db "w+", 0
 
 section .text
@@ -30,7 +30,7 @@ extern fprintf
 		mov r8, 10				;
 		push 34					;
 		call fprintf			; fprintf(rax, str, str, "\t", "\n", "\"")
-		pop rax					; remove 34 from the stack
+		pop rax					; remove " from the stack
 		pop rdi					; move fopen return into rdi
 		call fclose				; fclose(rax)
 		mov rsp, rbp			;
