@@ -9,9 +9,9 @@ For each language used, a Makefile is available to test easily the project. You 
 
 ## ASM
 
-- [ ] Colleen.s
-- [ ] Grace.s
-- [ ] Sully.s
+- [x] Colleen.s
+- [x] Grace.s
+- [x] Sully.s
 
 **Ressources**
 
