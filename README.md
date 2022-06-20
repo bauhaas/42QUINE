@@ -1,5 +1,7 @@
 # 42QUINE
 
+![](https://img.shields.io/github/languages/code-size/Korkrane/42QUINE?label=size&style=flat-square)
+
 **Testing**
 
 For each language used, a Makefile is available to test easily the project. You can :
