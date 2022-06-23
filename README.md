@@ -1,5 +1,8 @@
 # 42QUINE
 
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Korkrane/990a037d04c9a3b71a62aa5df94cac00/raw/dr-quine_grade.json)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Korkrane/990a037d04c9a3b71a62aa5df94cac00/raw/dr-quine_bon.json)
+![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Korkrane/990a037d04c9a3b71a62aa5df94cac00/raw/dr-quine_corr.json)
 ![](https://img.shields.io/github/languages/code-size/Korkrane/42QUINE?label=size&style=flat-square)
 
 **Testing**
